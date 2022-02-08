@@ -10,10 +10,18 @@ class RadioTest {
 
     @Test
     void getNumberChanel() {
-    Radio radio = new Radio(10);
-           int expected = 9;
+    Radio radio = new Radio(10,5,6);
+           int expected = 6;
           int actual = radio.getNumberChanel();
           assertEquals(expected, actual);
+    }
+
+    @Test
+    void getNumberChanel1() {
+        Radio radio = new Radio(10,5,9);
+        int expected = 9;
+        int actual = radio.getNumberChanel();
+        assertEquals(expected, actual);
     }
 
     @Test
